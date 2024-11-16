@@ -14,7 +14,7 @@ const Login = ({handleSignInSuccess}) => {
   
 
   useEffect(() => {
-    axios.get("https://financetracker-chv8.onrender.com/project/login")
+    axios.get("https://financetracker-zgc4.onrender.com/project/login")
       .then((res) => {
         console.log("Data fetched successfully", res.data);
         setStorage(res.data);
