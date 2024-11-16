@@ -27,7 +27,7 @@ const handleSubmit =  (e) => {
   e.preventDefault();
   console.log("form",formData)
 
-  axios.post("http://localhost:8097/project/save", formData)
+  axios.post("https://financetracker-chv8.onrender.com/project/save", formData)
   .then((response) => {
     console.log("Data saved successfully:", response.data);
     alert("Data saved");
