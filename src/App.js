@@ -52,7 +52,7 @@ return (
         <Route path="/reports" element={<Reports username={userName}/>}/>
         </>
         ):(
-          <Route path="/login" element={<Login handleSignInSuccess={handleSignInSuccess} />}/>
+          <Route path="/" element={<Login handleSignInSuccess={handleSignInSuccess} />}/>
         )}
       </Routes>
    </>
