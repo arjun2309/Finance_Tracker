@@ -18,7 +18,7 @@ const Budget = () => {
   useEffect(() => {
     const fetchBudget=async()=>{
     try{
-      const budgetResp=await axios.get(`https://https://financetracker-zgc4.onrender.com/getbudgets?username=${username}`)
+      const budgetResp=await axios.get(`https://financetracker-zgc4.onrender.com/getbudgets?username=${username}`)
         
             setBudgets(budgetResp.data);
             console.log("budget",budgetResp.data);
