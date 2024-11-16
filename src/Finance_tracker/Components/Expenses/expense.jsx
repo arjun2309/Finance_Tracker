@@ -21,8 +21,8 @@ const Expense=()=>{
     useEffect(()=>{
         const fetchData=async()=>{
             try{
-            const budgetRes=await axios.get('https://financetracker-chv8.onrender.com/project/getbudgets');
-            const expenseRes= await axios.get('https://financetracker-chv8.onrender.com/project/getexpenses')
+            const budgetRes=await axios.get('https://financetracker-zgc4.onrender.com/project/getbudgets');
+            const expenseRes= await axios.get('https://financetracker-zgc4.onrender.com/project/getexpenses')
             setBudgets(budgetRes.data.filter(budget=>budget.username===username));
             console.log("budgetRes",budgetRes.data)
             console.log("budgets1",budgets);
@@ -60,7 +60,7 @@ const Expense=()=>{
         }
 
         try{
-            const res=await axios.post('https://financetracker-chv8.onrender.com/project/saveexpenses',newExpense);
+            const res=await axios.post('https://financetracker-zgc4.onrender.com/project/saveexpenses',newExpense);
             setExpense([res.data,...expense]);
 
             setFormData({
