@@ -37,16 +37,7 @@ const handleLogout = () => {
 return (
   
     <>
-     
-  <h1>Cars</h1>
-  <select value={drop} onChange={handleChange}>
-    <option disabled> Select Car</option>
-     {cars.map(car=>(<option key={car.id} value={car.name}>{car.name}</option>))}    
-  </select>
-  
-    
-
-      
+          
       {isAuthenticated &&<NavibarComponents isAuthenticated={isAuthenticated}  handleLogout={handleLogout}/>}
     
       <Routes>
