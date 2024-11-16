@@ -1,0 +1,94 @@
+.budget-page {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.budget-form {
+    margin-bottom: 30px;
+    padding: 20px;
+    width: 30%;
+    margin-left: 35%;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.budget-form h4 {
+    margin-bottom: 20px;
+}
+
+.budget-form input {
+    width: 100%;
+    /* height: 100%; */
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.budget-form .btn {
+    background-color: #33476b;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.budget-form .btn:hover {
+    background-color: #435c8b;
+}
+
+.budget-list {
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.budget-list h4 {
+    margin-bottom: 20px;
+    
+}
+
+/* Table Styles */
+.budget-list table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+   
+}
+
+.budget-list th, .budget-list td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.budget-list th {
+    background-color: #33476b;
+    font-weight: bold;
+}
+
+.budget-list td button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.budget-list td button:hover {
+    background-color: #c82333;
+}
+
+.error {
+    color: red;
+    margin-bottom: 10px;
+}

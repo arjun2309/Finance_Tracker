@@ -1,0 +1,91 @@
+import './App.css';
+import { BrowserRouter, Route, Routes,useNavigate} from 'react-router-dom';
+import { useState } from 'react';
+import React from 'react';
+import DisplayName from './props/props';
+
+import Login from './Finance_tracker/Components/Authentications/login';
+import Register from './Finance_tracker/Components/Authentications/register';
+import NavibarComponents from './Finance_tracker/Components/navibar';
+import Budget from './Finance_tracker/Components/Budgets/budget';
+import Expense from './Finance_tracker/Components/Expenses/expense';
+import Reports from './Finance_tracker/Components/Reports/reports';
+import Dashboard from './Finance_tracker/Components/Dashboard/dashboard';
+
+
+function App() {
+
+  const [drop,setDrop]=useState('');
+const cars=[
+  {id:1,name:'ford',year:2000},
+  {id:2,name:'hyundai',year:2002},
+  {id:3,name:'honda',year:2002}
+]
+
+const handleChange=(e)=>{
+  setDrop(e.target.value);
+}
+
+const [isAuthenticated,setIsAuthenticated]=useState(false)
+const [userName,setUserName]=useState('');
+
+const handleSignInSuccess=(nameUser)=>{
+  setIsAuthenticated(true);
+  setUserName(nameUser);
+  localStorage.setItem("username",nameUser)
+};
+
+const AppNavigate=()=>{
+const navigate = useNavigate();
+
+const handleLogout = () => {
+  
+  setIsAuthenticated(false);
+  setUserName('');
+  localStorage.removeItem("username");
+  navigate('/login'); // Redirect to the login page
+};
+
+return (
+  
+    <>
+     
+  <h1>Cars</h1>
+  <select value={drop} onChange={handleChange}>
+    <option disabled> Select Car</option>
+     {cars.map(car=>(<option key={car.id} value={car.name}>{car.name}</option>))}    
+  </select>
+  
+    
+
+      
+      {isAuthenticated &&<NavibarComponents isAuthenticated={isAuthenticated}  handleLogout={handleLogout}/>}
+    
+      <Routes>
+       
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login handleSignInSuccess={handleSignInSuccess} />}/>
+        {isAuthenticated ?(
+          <>
+          <Route path="/dashboard" element ={<Dashboard username={userName}/>}/>
+        <Route path="/budgets" element ={<Budget username={userName}/>}/>
+        <Route path="/expense" element={<Expense username={userName}/>}/>
+        <Route path="/reports" element={<Reports username={userName}/>}/>
+        </>
+        ):(
+          <Route path="/login" element={<Login handleSignInSuccess={handleSignInSuccess} />}/>
+        )}
+      </Routes>
+   </>
+  );
+};
+return (
+  <div className="App">
+    <BrowserRouter>
+      <AppNavigate />
+    </BrowserRouter>
+  </div>
+);
+}
+
+export default App;

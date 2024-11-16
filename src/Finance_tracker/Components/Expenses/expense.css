@@ -1,0 +1,114 @@
+.expense-container {
+    /* max-width:800px;  */
+    margin: 0 auto; 
+    padding: 20px; 
+    background-color: #f9f9f9; 
+    border-radius: 8px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+
+h3, h4 {
+    text-align: center; 
+    color: #333; 
+    margin-bottom: 4%;
+    margin-top: 4%;
+}
+
+.expense-form {
+    display: flex; 
+    flex-direction: column; 
+    gap: 15px; 
+    margin-bottom: 20px; 
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    max-width: 400px;
+    margin-left: 32%;
+    border-radius: 8px;
+    height: 360px;
+
+}
+
+.expense-form input, .expense-form select, .expense-form button {
+    /* margin-top: 4%; */
+    padding: 10px; 
+    font-size: 16px; 
+    border-radius: 4px; 
+    max-width: 300px;
+    margin-left: 14%;
+    border: 1px solid #ccc; 
+}
+
+.expense-form button {
+    background-color: #33476b; 
+    color: white; 
+    border: none; 
+    cursor: pointer; 
+    margin-left: 32%;
+    width: 40%;
+}
+
+.expense-form button:hover {
+    
+    background-color: #425b8a; 
+}
+
+.expense-list{
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+.error {
+    color: red; 
+    text-align: center; 
+    margin-bottom: 10px; 
+}
+
+.table-li{
+    width: 95%; 
+    border-collapse: collapse; 
+    margin-top: 20px; 
+    margin-left: 3%;
+    border: solid 2px white;
+}
+
+table th, table td {
+    padding: 12px; 
+    text-align: left; 
+    border-left: 1px solid #cfcdcd; 
+    
+}
+
+table th {
+    background-color: #33476b; 
+    color: white; 
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2; 
+}
+
+table tr:hover {
+    background-color: #ddd; 
+}
+
+table td {
+    color: #555; 
+}
+
+@media (max-width: 768px) {
+    .expense-container {
+        padding: 10px; /* Less padding on smaller screens */
+    }
+    
+    .expense-form {
+        gap: 10px; /* Smaller gap between form elements */
+    }
+
+    table {
+        font-size: 14px; /* Smaller font size for tables on mobile */
+    }
+    
+    table th, table td {
+        padding: 10px; /* Less padding in table cells */
+    }
+}

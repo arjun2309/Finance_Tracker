@@ -1,0 +1,101 @@
+/* reports.css */
+
+.report-container {
+    max-width: 100%;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.report-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between form elements */
+    margin-bottom: 20px;
+    max-width: 400px;
+    padding-bottom: 60px;
+    padding-top: 60px;
+    border: 1px solid #ccc ;
+    background-color: #ffffff;
+    margin-left: 33%;
+    border-radius: 8px;
+    
+}
+.input{
+    max-width: 300px;
+    margin-left: 12%;
+}
+select,
+input[type="date"],
+button {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+}
+
+select:focus,
+input[type="date"]:focus,
+button:focus {
+    outline: none;
+    border-color: #33476b; /* Change border color on focus */
+}
+
+.btn-report {
+    background-color: #33476b; /* Bootstrap primary color */
+    color: white;
+    cursor: pointer;
+    width: 200px;
+    margin-left: 25%;
+}
+
+.btn-report:hover {
+    background-color: #425b8a; /* Darker blue on hover */
+}
+
+.error {
+    color: red;
+    text-align: center;
+    margin: 10px 0;
+}
+
+h4 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.table-report{
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+.table-rep {
+    width: 90%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    margin-left: 5%;
+    margin-bottom: 5%;
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1; /* Highlight row on hover */
+}
