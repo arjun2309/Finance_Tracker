@@ -2,7 +2,6 @@ import './App.css';
 import { BrowserRouter, Route, Routes,useNavigate} from 'react-router-dom';
 import { useState } from 'react';
 import React from 'react';
-import DisplayName from './props/props';
 
 import Login from './Finance_tracker/Components/Authentications/login';
 import Register from './Finance_tracker/Components/Authentications/register';
@@ -14,17 +13,6 @@ import Dashboard from './Finance_tracker/Components/Dashboard/dashboard';
 
 
 function App() {
-
-  const [drop,setDrop]=useState('');
-const cars=[
-  {id:1,name:'ford',year:2000},
-  {id:2,name:'hyundai',year:2002},
-  {id:3,name:'honda',year:2002}
-]
-
-const handleChange=(e)=>{
-  setDrop(e.target.value);
-}
 
 const [isAuthenticated,setIsAuthenticated]=useState(false)
 const [userName,setUserName]=useState('');
