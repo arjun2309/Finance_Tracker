@@ -16,8 +16,8 @@ const Reports = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const expenseRes = await axios.get('https://financetracker-chv8.onrender.com/project/getexpenses');
-                const budgetRes = await axios.get('https://financetracker-chv8.onrender.com/project/getbudgets');
+                const expenseRes = await axios.get('https://financetracker-zgc4.onrender.com/project/getexpenses');
+                const budgetRes = await axios.get('https://financetracker-zgc4.onrender.com.com/project/getbudgets');
                 setExpenses(expenseRes.data.filter(exp => exp.username === username));
 
                 const categories = budgetRes.data
