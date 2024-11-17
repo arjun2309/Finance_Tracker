@@ -18,7 +18,6 @@ const Dashboard = () => {
            
                 const totalExpense=userExpense.reduce((acc, expense) => acc + parseFloat(expense.amount), 0);
                 setTotal(totalExpense);
-                console.log("total",totalExpense);
             } catch (err) {
                 setError("Error fetching data");
             }
