@@ -12,7 +12,7 @@ const Dashboard = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const expenseRes = await axios.get('https://financetracker-zgc4.onrender.com.com/project/getexpenses');
+                const expenseRes = await axios.get('https://financetracker-zgc4.onrender.com/project/getexpenses');
                 const userExpense=expenseRes.data.filter(expense=>expense.username===username);
                 setExpenses(userExpense); 
            
