@@ -16,29 +16,22 @@ const Login = ({handleSignInSuccess}) => {
   useEffect(() => {
     axios.get("https://financetracker-zgc4.onrender.com/project/login")
       .then((res) => {
-        console.log("Data fetched successfully", res.data);
         setStorage(res.data);
       })
       .catch((err) => {
-        console.log("Data Error", err);
       });
   }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(email);
-    console.log(password);
     if (email && password) {
-        console.log("prints");
       const user = storage.find((user) => user.email === email && user.password === password);
       if (user) {
-        console.log(user)
         var nameUser= user.username;
        
         handleSignInSuccess(nameUser)
         alert("You are logged in")
         navigate("/dashboard");
-        console.log('Login successful for user:', nameUser);
       } else {
         alert('Login failed. Invalid email or password.');
       }
