@@ -21,7 +21,6 @@ const Budget = () => {
       const budgetResp=await axios.get(`https://financetracker-zgc4.onrender.com/project/getbudgets`)
         
             setBudgets(budgetResp.data);
-            console.log("budget",budgetResp.data);
         }
         catch(err)  {
             setError("Error fetching data");
@@ -53,23 +52,18 @@ const Budget = () => {
     
     
       const response = await axios.post('https://financetracker-zgc4.onrender.com/project/savebudgets', newBudget);
-      console.log("new",newBudget)
       setBudgets((prev) => [...prev, response.data]); // Add new budget to list
       setFormData({ category: '', budgetlimit: '', month: '' }); // Clear form
       setError(''); 
       alert("Budget added successfully");
     } catch (err) {
-      console.error('Error adding budget:', err);
       setError('Failed to add budget. Please try again.');
     }
   };
   const handleDelete=async(id)=>{
     if(window.confirm('Are you sure you want to delete this budget')){
         try{
-            console.log(id)
-            console.log("delete")
             await axios.delete(`https://financetracker-zgc4.onrender.com/project/deletebudgets/${id}`);
-            console.log("delete")
             setBudgets(budgets.filter(budget=>budget.id!==id));
             alert('Budget deleted successfully');
         }
