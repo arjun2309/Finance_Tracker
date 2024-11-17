@@ -70,7 +70,7 @@ const handleSubmit =  (e) => {
 
         <p className="login_acc">
           Already have an Account?{' '}
-          <Link style={{ textDecoration: 'none', color: '#ff4141' }} to="/login">
+          <Link style={{ textDecoration: 'none', color: '#b31313' }} to="/login">
             login here
           </Link>
         </p>
