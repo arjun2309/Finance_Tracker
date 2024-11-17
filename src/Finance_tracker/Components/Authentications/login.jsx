@@ -71,7 +71,7 @@ const Login = ({handleSignInSuccess}) => {
 
           <p style={{marginLeft:"-120px",width:"600px"}}> 
             I don't have an account 
-            <Link style={{ marginLeft:"10px",textDecoration: "none", color: "#ff4141" }} to="/Register">
+            <Link style={{ marginLeft:"10px",textDecoration: "none", color: "#b31313" }} to="/Register">
                register here
             </Link>
           </p>
