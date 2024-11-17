@@ -13,31 +13,24 @@ function Register() {
  const navigate = useNavigate();
   const handleChange = (e) => {
     const { name, value } = e.target;
-    console.log(value, name);
-    console.log(value);
     setFormData((prev)=>({
       ...prev,
       [name] : value
     }));
-    console.log(formData)
     
   };
 
 const handleSubmit =  (e) => {
   e.preventDefault();
-  console.log("form",formData)
 
   axios.post("https://financetracker-zgc4.onrender.com/project/save", formData)
   .then((response) => {
-    console.log("Data saved successfully:", response.data);
     alert("Data saved");
   })
   .catch((error) => {
-    console.error("Error saving data:", error);
     alert("Failed to save data");
   });
 
-  console.log(formData)
 };
 
 
