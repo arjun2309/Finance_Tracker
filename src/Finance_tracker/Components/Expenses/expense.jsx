@@ -24,8 +24,6 @@ const Expense=()=>{
             const budgetRes=await axios.get('https://financetracker-zgc4.onrender.com/project/getbudgets');
             const expenseRes= await axios.get('https://financetracker-zgc4.onrender.com/project/getexpenses')
             setBudgets(budgetRes.data.filter(budget=>budget.username===username));
-            console.log("budgetRes",budgetRes.data)
-            console.log("budgets1",budgets);
             setExpense(expenseRes.data.filter(expense=>expense.username===username));     
         }catch(err){
                 setError('Error fetching data');
