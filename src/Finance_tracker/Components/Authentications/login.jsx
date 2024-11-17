@@ -50,7 +50,7 @@ const Login = ({handleSignInSuccess}) => {
               <input
                 type="email"
                 name="email"
-                placeholder="Your Emails"
+                placeholder="Your Email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
